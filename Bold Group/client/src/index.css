@@ -1,0 +1,53 @@
+/**
+ * Global CSS Styles
+ * 
+ * This file contains the base Tailwind CSS imports and global style definitions
+ * for the Bold Group website. These styles apply to all components.
+ */
+
+/* Import Tailwind's base styles */
+@tailwind base;
+
+/* Import Tailwind's component classes */
+@tailwind components;
+
+/* Import Tailwind's utility classes */
+@tailwind utilities;
+
+/**
+ * Base Layer Styles
+ * 
+ * These styles define the foundation for all elements in the application.
+ * They apply the theme colors and default styling to HTML elements.
+ */
+@layer base {
+  /* Apply border color to all elements consistently */
+  * {
+    @apply border-border;
+  }
+
+  /* Reset scroll behavior for HTML */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 0;
+    height: 100%;
+  }
+
+  /* Set default body styles with proper font rendering and theme colors */
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+  }
+
+  /* Reset for page transitions */
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+}
