@@ -16,6 +16,16 @@ import Checkout from "./pages/Checkout";
 import Team from "./pages/Team";
 import NotFound from "@/pages/not-found";
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  
+  return null;
+}
+
 /**
  * Router Component
  * 
